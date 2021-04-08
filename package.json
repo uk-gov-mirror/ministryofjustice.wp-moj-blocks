@@ -11,34 +11,29 @@
     "Ministry of Justice"
   ],
   "devDependencies": {
-    "@wordpress/block-editor": "^4.3.6",
-    "@wordpress/blocks": "^6.20.3",
-    "@wordpress/components": "^10.0.5",
-    "@wordpress/element": "^2.16.0",
-    "@wordpress/i18n": "^3.14.0",
-    "@wordpress/scripts": "^12.1.1",
-    "copy-webpack-plugin": "^6.0.3",
-    "govuk-frontend": "^3.8.1",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-webpack-plugin": "^2.4.2",
+    "@wordpress/block-editor": "^5.3.1",
+    "@wordpress/blocks": "^8.0.1",
+    "@wordpress/components": "^13.0.1",
+    "@wordpress/element": "^2.20.1",
+    "@wordpress/i18n": "^3.19.1",
+    "@wordpress/scripts": "^14.1.0",
+    "govuk-frontend": "^3.11.0",
     "import-glob-loader": "^1.1.0",
-    "jsdoc": "^3.6.5",
-    "laravel-mix": "^5.0.7",
-    "laravel-mix-glob": "^1.1.4",
-    "laravel-mix-imagemin": "^1.0.3",
-    "node-sass": "^4.14.1",
+    "jsdoc": "^3.6.6",
+    "laravel-mix": "^6.0.16",
+    "node-sass": "^5.0.0",
     "resolve-url-loader": "^3.1.2",
-    "sass": "^1.32.7",
+    "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
-    "vue-template-compiler": "^2.6.11",
+    "vue-template-compiler": "^2.6.12",
     "wp-hookdoc": "^0.2.0"
   },
   "scripts": {
     "start": "wp-scripts start",
-    "build": "wp-scripts build && NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build": "wp-scripts build && NODE_ENV=production webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build-comp": "wp-scripts build",
     "zip": "zip -r mojblocks.zip ./ -x .git .gitignore *.git/* .DS_Store .package.json .package-lock.json *.scss webpack.config.js mojblocks.zip  postcss.config.css README.md .wordpress-org/**\\* .ds_store vendor/**\\* node_modules/**\\* src/**\\* webpack.config.js n",
     "build:docs": "rm -rf hookdocs/ && jsdoc -c hookdoc-conf.json",
-    "watch": "webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "watch": "webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js"
   }
 }
